@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conselho Tutelar</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Site oficial do Conselho Tutelar, oferecendo informações e formas de contato para proteção de crianças e adolescentes." />
   <link rel="stylesheet" href="style.css" />
+  <title>Conselho Tutelar</title>
 </head>
 <body>
 
-  <header>
+  <header id="inicio">
     <div class="container">
       <div class="logo">
-        <img src= "assets/logo.png" alt= "Conselho Tutelar" height="30" /> 
-        <strong>Conselho Tutelar</strong>
+        <a href="#inicio">
+          <img src= "assets/logo.png" alt= "Conselho Tutelar" height="30" /> 
+          <strong>Conselho Tutelar</strong>
+        </a>
       </div>
       <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-        <button class="btn-white">Denunciar</button>
+        <a href="#sobre">Sobre</a>
+        <a href="#informacoes">Informações</a>
+        <a href="#contato">Contato</a>
       </nav>
     </div>
   </header>
@@ -27,11 +30,39 @@
     <div class="container center">
       <h1>Protegendo os Direitos de Crianças e Adolescentes</h1>
       <p>O Conselho Tutelar está aqui para garantir o bem-estar e a segurança dos jovens em nossa comunidade.</p>
-      <button class="btn-blue">Saiba como denunciar</button>
+      <button class="open-modal btn-blue" data-modal="modal1">Saiba como denunciar</button>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Fale com a gente</h2>
+          <form class="modal-form">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+          
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+          
+            <label for="celular">Celular</label>
+            <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" required>
+          
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva uma mensagem" required></textarea>
+          
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="info">
+  <section id="sobre" class="sobre">
+    <div class="container center">
+      <h2>Sobre o Conselho Tutelar</h2>
+      <p>O Conselho Tutelar é um órgão permanente e autônomo, não jurisdicional, encarregado pela sociedade de zelar pelo cumprimento dos direitos da criança e do adolescente. Nosso objetivo é garantir que todas as crianças e adolescentes tenham seus direitos respeitados e possam crescer em um ambiente seguro e saudável.</p>
+    </div>
+  </section>
+
+  <section id="informacoes" class="info">
     <div class="container">
       <h2>Informações Importantes</h2>
       <div class="cards">
@@ -57,14 +88,7 @@
     </div>
   </section>
 
-  <section class="sobre">
-    <div class="container center">
-      <h2>Sobre o Conselho Tutelar</h2>
-      <p>O Conselho Tutelar é um órgão permanente e autônomo, não jurisdicional, encarregado pela sociedade de zelar pelo cumprimento dos direitos da criança e do adolescente. Nosso objetivo é garantir que todas as crianças e adolescentes tenham seus direitos respeitados e possam crescer em um ambiente seguro e saudável.</p>
-    </div>
-  </section>
-
-  <section class="contato">
+  <section id="contato" class="contato">
     <div class="container center">
       <h2>Entre em Contato</h2>
       <div class="contato-box">
@@ -80,17 +104,17 @@
       <div class="col">
         <h4>Links Úteis</h4>
         <ul>
-          <li><a href="#">Estatuto da Criança e do Adolescente</a></li>
-          <li><a href="#">Direitos da Criança e do Adolescente</a></li>
-          <li><a href="#">Como Denunciar</a></li>
+          <li><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/crianca-e-adolescente/publicacoes/eca_mdhc_2024.pdf" target="_blank">Estatuto da Criança e do Adolescente</a></li>
+          <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm" target="_blank">Direitos da Criança e do Adolescente</a></li>
+          <li><p target="_blank" class="open-modal" data-modal="modal1">Como Denunciar</p></li>
         </ul>
       </div>
       <div class="col">
         <h4>Menu</h4>
         <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
       <div class="col">
@@ -100,7 +124,7 @@
       <p>Gustavo Marques</p>
       <p>Miguel Ângelo</p>
       <p>Nicolly Almeida</p>
-      <p>Davi Barbosa<p>
+      <p>Davi Barbosa</p>
       <p>Oséias</p>
       </div>
     </div>
@@ -109,7 +133,7 @@
       © 2025 Desenvolvido por alunos da Unisselvi. Todos os direitos reservados
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
 
