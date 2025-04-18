@@ -38,9 +38,7 @@ Abra o arquivo index.html no navegador para visualizar o funcionamento.
 
 ## 🎨 Estilização
 
-O projeto utiliza SCSS para organização e otimização do CSS. Certifique-se de compilar o SCSS para CSS antes de executar o projeto:
-
-sass styles.scss styles.css
+O projeto utiliza CSS3 puro para estilização, garantindo uma experiência moderna, limpa e compatível com diferentes tamanhos de tela.
 
 ## 📝 Licença
 
